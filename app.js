@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -43,10 +44,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// var port = process.env.PORT || 4000;
-// app.set('port', port);
-// app.listen(port, function () {
-//   console.log('Example app listening on port ' + port + '!');
-// });
+var port = process.env.PORT || 4000;
+app.set('port', port);
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port + '!');
+});
 
 module.exports = app;

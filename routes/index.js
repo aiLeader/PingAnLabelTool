@@ -13,6 +13,7 @@ router.get('/check', function(req, res, next) {
 });
 
 router.get('/getlist', function(req, res, next) {
+  "use strict";
   let file = fs.readFileSync('public/file/label.json');
   // console.log(file);
   res.send(file);
